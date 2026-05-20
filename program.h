@@ -11,3 +11,4 @@ void quick_sort(int arr[], int low, int high);
 void shell_sort(int arr[], int n);
 
 //atur file
+void read_file(const char *filename, int arr[], int *n);
