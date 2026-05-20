@@ -9,3 +9,5 @@ void selection_sort(int arr[], int n);
 void merge_sort(int arr[], int l, int r);
 void quick_sort(int arr[], int low, int high);
 void shell_sort(int arr[], int n);
+
+//atur file
