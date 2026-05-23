@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define MAX_PANJANG_KATA 50
 
 //sorting dasar
 void bubble_sort(int arr[], int n);
