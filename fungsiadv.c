@@ -18,3 +18,27 @@ void merge(char arr[][MAX_PANJANG_KATA], int l, int m, int r) {
     int i = 0;
     int j = 0;
     int k = l;
+
+    while (i < n1 && j < n2) {
+        if (strcmp(kiri[i], kanan[j]) <= 0) {
+            strcpy(arr[k], kiri[i]);
+            i++;
+        } else {
+            strcpy(arr[k], kanan[j]);
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        strcpy(arr[k], kiri[i]);
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        strcpy(arr[k], kanan[j]);
+        j++;
+        k++;
+    }
+}
