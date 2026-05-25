@@ -42,3 +42,12 @@ void merge(char arr[][MAX_PANJANG_KATA], int l, int m, int r) {
         k++;
     }
 }
+
+void mergeSort(char arr[][MAX_PANJANG_KATA], int l, int r) {
+    if (l < r) {
+        int m = (l + r) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
