@@ -152,4 +152,11 @@ void proses_advance(int metode, char nama_file[]) {
         printf("File %s tidak ditemukan!\n", nama_file);
         return;
     }
+    acak_data_string(data, jumlah_data);
+    printf("Masukkan jumlah data/kata yang ingin ditampilkan: ");
+    if (scanf("%d", &tampil) != 1) {
+        hapus_buffer();
+        tampil = 10;
+        printf("Input tidak valid! Menampilkan 10 data saja.\n");
+    }
 }
