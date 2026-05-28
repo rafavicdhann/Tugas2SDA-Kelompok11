@@ -169,4 +169,10 @@ void proses_advance(int metode, char nama_file[]) {
     } else if (metode == 3) {
         shell_sort(data, jumlah_data);
     }
+    clock_t selesai = clock();
+    double waktu = ((double)selesai - (double)mulai) / (double)CLOCKS_PER_SEC;
+    printf("\nData setelah sorting:\n");
+    tampil_string(data, jumlah_data, tampil);
+    printf("Jumlah Data: %d kata\n", jumlah_data);
+    printf("Waktu eksekusi: %f detik\n", waktu);
 }
