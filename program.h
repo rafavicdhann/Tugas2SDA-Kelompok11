@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #define MAX_PANJANG_KATA 50
 #define JUMLAH_DATA_INT 1000
