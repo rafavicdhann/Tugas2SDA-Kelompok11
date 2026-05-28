@@ -159,4 +159,14 @@ void proses_advance(int metode, char nama_file[]) {
         tampil = 10;
         printf("Input tidak valid! Menampilkan 10 data saja.\n");
     }
+    printf("\nData sebelum Sorting:\n");
+    tampil_string(data, jumlah_data, tampil);
+    clock_t mulai = clock();
+    if (metode == 1) {
+        merge_sort(data, 0, jumlah_data - 1);
+    } else if (metode == 2) {
+        quick_sort(data, 0, jumlah_data - 1);
+    } else if (metode == 3) {
+        shell_sort(data, jumlah_data);
+    }
 }
