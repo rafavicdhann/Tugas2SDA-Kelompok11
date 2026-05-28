@@ -1,18 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "program.h"
-
-void hapus_buffer();
-void menu_utama();
-void menu_sorting_dasar();
-void menu_advance_sorting();
-void tampil_int(int arr[], int n, int batas);
-void tampil_string(char arr[][MAX_PANJANG_KATA], int n, int batas);
-void acak_data_int(int arr[], int n);
-void acak_data_string(char arr[][MAX_PANJANG_KATA], int n);
-void proses_dasar(int metode);
-void proses_advance(int metode, char nama_file[]);
 
 int main() {
     int pilihan = 0, sub_pilihan = 0;
@@ -98,33 +84,33 @@ void menu_advance_sorting() {
     printf("Pilih Metode : ");
 }
 
-void tampil_int(int arr[], int n, int batas) {
-    if (n < batas) {
+void tampil_int(int arr[],int n, int batas){
+    if (n < batas){
         batas = n;
     }
-    for (int i = 0; i < batas; i++) {
+    for (int i = 0; i < batas; i++){
         printf("%d ", arr[i]);
     }
     printf("\n");
 }
 
-void tampil_string(char arr[][MAX_PANJANG_KATA], int n, int batas) {
-    if (n < batas) {
+void tampil_string(char arr[][MAX_PANJANG_KATA],int n,int batas){
+    if (n < batas){
         batas = n;
     }
-    for (int i = 0; i < batas; i++) {
-        printf("%s ", arr[i]);
+    for (int i = 0;i < batas;i++){
+        printf("%s ",arr[i]);
     }
     printf("\n");
 }
 
-void acak_data_int(int arr[], int n) {
+void acak_data_int(int arr[], int n){
     for (int i = 0; i < n; i++) {
         arr[i] = rand() % 1000;
     }
 }
 
-void acak_data_string(char arr[][MAX_PANJANG_KATA], int n) {
+void acak_data_string(char arr[][MAX_PANJANG_KATA],int n){
     for (int i = 0; i < n; i++) {
         int j = rand() % n;
         swap(arr[i], arr[j]);

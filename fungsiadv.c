@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "program.h"
 
 void merge(char arr[][MAX_PANJANG_KATA], int l, int m, int r){
