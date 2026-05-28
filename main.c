@@ -116,3 +116,30 @@ void acak_data_string(char arr[][MAX_PANJANG_KATA],int n){
         swap(arr[i], arr[j]);
     }
 }
+
+void proses_dasar(int metode) {
+    int data[JUMLAH_DATA_INT];
+    int tampil = 0;
+    acak_data_int(data, JUMLAH_DATA_INT);
+    printf("Masukkan jumlah data yang ingin ditampilkan: ");
+    if (scanf("%d", &tampil) != 1) {
+        hapus_buffer();
+        tampil = 10;
+        printf("Input tidak valid! Menampilkan 10 data saja.\n");
+    }
+    printf("\nData sebelum Sorting:\n");
+    tampil_int(data, JUMLAH_DATA_INT, tampil);
+    clock_t mulai = clock();
+    if (metode == 1) {
+        bubble_sort(data, JUMLAH_DATA_INT);
+    } else if (metode == 2) {
+        insertion_sort(data, JUMLAH_DATA_INT);
+    } else if (metode == 3) {
+        selection_sort(data, JUMLAH_DATA_INT);
+    }
+    clock_t selesai = clock();
+    double waktu = ((double)selesai - (double)mulai) / (double)CLOCKS_PER_SEC;
+    printf("\nData setelah sorting:\n");
+    tampil_int(data, JUMLAH_DATA_INT, tampil);
+    printf("Waktu eksekusi: %f detik\n", waktu);
+}

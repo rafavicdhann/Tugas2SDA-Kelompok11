@@ -3,6 +3,8 @@
 #include <time.h>
 
 #define MAX_PANJANG_KATA 50
+#define JUMLAH_DATA_INT 1000
+#define MAX_DATA_STRING 4000
 
 //sorting dasar
 void bubble_sort(int arr[], int n);
