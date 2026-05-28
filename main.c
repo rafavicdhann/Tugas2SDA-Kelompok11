@@ -143,3 +143,13 @@ void proses_dasar(int metode) {
     tampil_int(data, JUMLAH_DATA_INT, tampil);
     printf("Waktu eksekusi: %f detik\n", waktu);
 }
+
+void proses_advance(int metode, char nama_file[]) {
+    char data[MAX_DATA_STRING][MAX_PANJANG_KATA];
+    int tampil = 0;
+    int jumlah_data = read_file(nama_file, data, MAX_DATA_STRING);
+    if (jumlah_data == 0) {
+        printf("File %s tidak ditemukan!\n", nama_file);
+        return;
+    }
+}
