@@ -32,3 +32,4 @@ void acak_data_int(int arr[], int n);
 void acak_data_string(char arr[][MAX_PANJANG_KATA], int n);
 void proses_dasar(int metode);
 void proses_advance(int metode, char nama_file[]);
+void swap(char a[], char b[]);

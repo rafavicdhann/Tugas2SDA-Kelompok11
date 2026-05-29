@@ -46,14 +46,14 @@ void merge_sort(char arr[][MAX_PANJANG_KATA], int l, int r){
     }
 }
 
-void swap(char a[], char b[]) {
+void swap(char a[], char b[]){
     char temp[MAX_PANJANG_KATA];
     strcpy(temp, a);
     strcpy(a, b);
     strcpy(b, temp);
 }
 
-int partition(char arr[][MAX_PANJANG_KATA], int low, int high) {
+int partition(char arr[][MAX_PANJANG_KATA], int low, int high){
     char pivot[MAX_PANJANG_KATA];
     strcpy(pivot, arr[high]);
     int i = low - 1;
@@ -67,7 +67,7 @@ int partition(char arr[][MAX_PANJANG_KATA], int low, int high) {
     return i + 1;
 }
 
-void quick_sort(char arr[][MAX_PANJANG_KATA], int low, int high) {
+void quick_sort(char arr[][MAX_PANJANG_KATA], int low, int high){
     if (low < high) {
         int pi = partition(arr, low, high);
         quick_sort(arr, low, pi - 1);
@@ -75,7 +75,7 @@ void quick_sort(char arr[][MAX_PANJANG_KATA], int low, int high) {
     }
 }
 
-void shell_sort(char arr[][MAX_PANJANG_KATA], int n) {
+void shell_sort(char arr[][MAX_PANJANG_KATA], int n){
     int j;
     char temp[MAX_PANJANG_KATA];
     for (int interval = n / 2; interval > 0; interval /= 2) {
