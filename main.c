@@ -54,7 +54,7 @@ int main() {
     return 0;
 }
 
-void hapus_buffer() {
+void hapus_buffer(){
     while (getchar() != '\n');
 }
 
